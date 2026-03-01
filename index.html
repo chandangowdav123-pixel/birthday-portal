@@ -14,9 +14,12 @@
 <div class="container">
     <h1>I have a surprise!</h1>
 
-<button onclick="generateWish()">Next</button>
+    <!-- 👇 ADD INPUT BOX HERE -->
+    <input type="text" id="name" placeholder="Enter Name">
 
-    <h2 id="wishMessage"></h2>
+    <!-- 👇 UPDATED BUTTON -->
+    <button onclick="goToBirthday()">Next</button>
+
 </div>
 
 <!-- Optional background music -->
@@ -24,7 +27,7 @@
     <source src="birthday.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Confetti Library (MUST come before script.js) -->
+<!-- Confetti Library -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <!-- Your JavaScript -->
@@ -32,7 +35,3 @@
 
 </body>
 </html>
-
-
-
-

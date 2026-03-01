@@ -6,24 +6,16 @@
 </head>
 <body>
 
-<h1 id="birthdayMessage"></h1>
+<h1>🎉 Happy Birthday Chinmayi 🎉</h1>
 
-<img src="C:\Users\Lenovo\Downloads\cake smash.gif"
-     width="300" 
+<img src=""C:\Users\Lenovo\Downloads\cake smash.gif""
+     width="300"
      alt="Birthday GIF">
 
-<!-- Confetti Library -->
+<!-- Confetti -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
-    // Show Name from URL
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get("name");
-
-    document.getElementById("birthdayMessage").innerHTML =
-        "🎉 Happy Birthday " + name + " 🎉";
-
-    // Confetti
     const duration = 4 * 1000;
     const end = Date.now() + duration;
 

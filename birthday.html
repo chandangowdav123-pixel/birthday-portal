@@ -6,27 +6,39 @@
 </head>
 <body>
 
-<h1>🎉 Happy Birthday Chinmayi 🎉</h1>
+<div class="birthday-container">
 
-<img src="./cake-smash.gif" width="300" alt="Birthday GIF">
-<!-- Confetti -->
+    <h1>🎉 Happy Birthday Chinmayi 🎉</h1>
+
+    <img src="./cake-smash.gif" width="300" alt="Birthday GIF">
+
+</div>
+
+<!-- Confetti Library -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
-    const duration = 4 * 1000;
-    const end = Date.now() + duration;
+    function startConfetti() {
+        const duration = 3000;
+        const animationEnd = Date.now() + duration;
 
-    (function frame() {
-        confetti({
-            particleCount: 6,
-            spread: 70,
-            origin: { y: 0.6 }
-        });
+        const interval = setInterval(function() {
+            const timeLeft = animationEnd - Date.now();
 
-        if (Date.now() < end) {
-            requestAnimationFrame(frame);
-        }
-    })();
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                return;
+            }
+
+            confetti({
+                particleCount: 6,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }, 250);
+    }
+
+    startConfetti();
 </script>
 
 </body>
